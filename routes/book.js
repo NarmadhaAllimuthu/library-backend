@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 const auth = require('../authorization');
 
 try{
-    mongoose.connect('mongodb+srv://narmadhaallimuthu006:nQvSKnXowif67Ot7@cluster0.c3dbpi1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+    mongoose.connect(process.env.MONGODB_URL);
     console.log("Database Connected");
 }
 catch(err){
